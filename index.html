@@ -3,98 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICODS | Instituto de Comportamento e Dados Sociais</title>
-    <style>
-        :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --bg-light: #f8fafc;
-            --text-dark: #334155;
-            --text-muted: #64748b;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { color: var(--text-dark); background-color: #ffffff; line-height: 1.6; }
-        header { background-color: var(--primary); color: #ffffff; padding: 4rem 2rem; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 1rem; letter-spacing: -0.02em; }
-        header p { font-size: 1.25rem; color: #94a3b8; max-width: 800px; margin: 0 auto 2rem; }
-        .btn { display: inline-block; background-color: var(--accent); color: #ffffff; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
-        .section-title { font-size: 1.8rem; color: var(--primary); margin-bottom: 2.5rem; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 2rem; }
-        .card { background-color: var(--bg-light); border: 1px solid #e2e8f0; border-radius: 8px; padding: 2rem; }
-        .card h3 { color: var(--accent); font-size: 1.3rem; margin-bottom: 0.75rem; }
-        .card p.subtitle { font-weight: 600; color: var(--primary); margin-bottom: 1rem; font-size: 0.95rem; }
-        .card ul { list-style: none; padding-left: 0; }
-        .card ul li { margin-bottom: 0.5rem; color: var(--text-dark); position: relative; padding-left: 1.2rem; }
-        .card ul li::before { content: "•"; color: var(--accent); position: absolute; left: 0; font-weight: bold; }
-        footer { background-color: var(--primary); color: #64748b; text-align: center; padding: 2rem; font-size: 0.9rem; margin-top: 4rem; }
-        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } header h1 { font-size: 1.8rem; } }
-    </style>
+    <title>ICODS - Instituto de Comportamento e Dados Sociais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>Instituto de Comportamento e Dados Sociais</h1>
-        <p>Soluções em Behavioral Compliance, Avaliação de Políticas Públicas e Engenharia Comportamental Organizacional.</p>
-        <a href="mailto:contato@icods.org" class="btn">Contato Institucional</a>
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-mark">ICODS</span>
+                <span class="logo-text">Instituto de Comportamento e Dados Sociais</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#pilares">Pilares</a>
+                <a href="#tecnologia">Tecnologia</a>
+                <a href="https://www.linkedin.com/company/icods" target="_blank" class="btn-linkedin">LinkedIn Oficial</a>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
-        <h2 class="section-title">Pilares de Atuação</h2>
-        
-        <div class="grid">
-            <!-- Pilha 1 -->
-            <div class="card">
-                <h3>01. Avaliação de Políticas Públicas & LACD</h3>
-                <p class="subtitle">Metodologia Científica e Diagnóstico Sistêmico</p>
-                <p style="margin-bottom: 1rem; font-size: 0.95rem;">Aplicação da Análise do Comportamento (BSA) para mapeamento de contingências e avaliação do impacto real de programas públicos e sociais.</p>
-                <ul>
-                    <li>Mapeamento de contingências e desenho do ecossistema de dados.</li>
-                    <li>Aplicação da Metodologia LACD para tomada de decisão.</li>
-                    <li>Relatórios de Auditoria e Recomendações de Aprimoramento.</li>
-                </ul>
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-badge">Ciência, Evidência e Impacto Real</div>
+            <h1>A ciência do comportamento aliada à precisão dos dados sociais</h1>
+            <p>Substituímos o empirismo organizacional e governamental por diagnósticos científicos e modelagem preditiva avançada.</p>
+            <div class="hero-actions">
+                <a href="#pilares" class="btn-primary">Explorar Pilares</a>
+                <a href="https://www.linkedin.com/company/icods" target="_blank" class="btn-secondary">Acompanhar no LinkedIn</a>
             </div>
+        </div>
+    </section>
 
-            <!-- Pilha 2 -->
-            <div class="card">
-                <h3>02. Behavioral Compliance & Gestão de Risco</h3>
-                <p class="subtitle">Mitigação de Riscos no Setor Financeiro e Corporativo</p>
-                <p style="margin-bottom: 1rem; font-size: 0.95rem;">Intervenções comportamentais e Nudging para assegurar conformidade regulatória e blindagem operacional na ponta do processo.</p>
-                <ul>
-                    <li>Diagnóstico de Vulnerabilidades Comportamentais.</li>
-                    <li>Desenho de Arquitetura de Escolhas (Nudging Regulatório).</li>
-                    <li>Capacitação Executiva e Treinamento de Equipes de Alto Risco.</li>
-                </ul>
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quem Somos</h2>
+                <div class="underline"></div>
             </div>
+            <p class="about-lead">O <strong>ICODS</strong> é um centro independente de pesquisa e inteligência estratégica focado na intersecção entre a <strong>Análise do Comportamento</strong> e a <strong>Ciência de Dados</strong>.</p>
+            <p class="about-desc">Nossa missão é estruturar sistemas de conformidade, políticas públicas e diretrizes de risco focando na modificação de contingências reais — garantindo que o ambiente gere o comportamento desejado de forma mensurável e sustentável.</p>
+        </div>
+    </section>
 
-            <!-- Pilha 3 -->
-            <div class="card">
-                <h3>03. Governança ESG & Logística Reversa</h3>
-                <p class="subtitle">Engenharia Comportamental Aplicada ao Meio Ambiente</p>
-                <p style="margin-bottom: 1rem; font-size: 0.95rem;">Estratégias para engajamento e mudança sustentável na ponta da cadeia de descarte e conformidade ambiental.</p>
-                <ul>
-                    <li>Mapeamento do Gargalo Comportamental no Descarte.</li>
-                    <li>Arquitetura de Escolhas Sustentáveis (Nudging ESG).</li>
-                    <li>Consultoria em Conformidade Socioambiental.</li>
-                </ul>
+    <section id="pilares" class="pillars">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Pilares de Atuação</h2>
+                <div class="underline"></div>
+                <p>Soluções estruturadas para ambientes de alta complexidade regulatória e comportamental.</p>
             </div>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-number">01</div>
+                    <h3>Políticas Públicas</h3>
+                    <p>Avaliação de efetividade e auditoria de programas sociais e normativos com base no comportamento real do cidadão e do operador público.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-number">02</div>
+                    <h3>Instituições Financeiras</h3>
+                    <p>Modelagem preditiva de risco, conformidade comportamental (Behavioral Compliance) e mitigação de vieses em crédito e fraudes.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-number">03</div>
+                    <h3>Logística Reversa</h3>
+                    <p>Engenharia de incentivos e design de ambientes para aumentar o engajamento ecológico e o retorno de materiais de forma sustentável.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-number">04</div>
+                    <h3>Captação de Recursos</h3>
+                    <p>Estruturação técnica de métricas de impacto e conformidade para editais de fomento, fundos e investidores institucionais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Pilha 4 -->
-            <div class="card">
-                <h3>04. Captação de Recursos & Sustentabilidade</h3>
-                <p class="subtitle">Arquitetura de Projetos Sociais de Alto Impacto</p>
-                <p style="margin-bottom: 1rem; font-size: 0.95rem;">Estruturação técnica de projetos do Terceiro Setor com métricas rigorosas para atração de investimento privado e editais.</p>
-                <ul>
-                    <li>Modelagem e Desenho de Propostas para Editais.</li>
-                    <li>Estratégias de Captação e Sustentabilidade Financeira B2B.</li>
-                    <li>Auditoria de Impacto e Métricas Comportamentais.</li>
+    <section id="tecnologia" class="tech-section">
+        <div class="container tech-container">
+            <div class="tech-content">
+                <h2>Abordagem Tecnológica e Prisional</h2>
+                <p>Nossos projetos são apoiados por ferramentas proprietárias de automação de diagnósticos comportamentais e matrizes parametrizadas.</p>
+                <ul class="tech-list">
+                    <li>✓ Mapeamento automatizado de antecedentes e consequências</li>
+                    <li>✓ Geração de scores dinâmicos de risco comportamental</li>
+                    <li>✓ Simulação de contingências normativas antes da implementação</li>
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
 
-    <footer>
-        <p>&copy; ICODS - Instituto de Comportamento e Dados Sociais. Todos os direitos reservados.</p>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">ICODS</div>
+            <p>&copy; 2026 Instituto de Comportamento e Dados Sociais. Todos os direitos reservados.</p>
+            <p class="footer-location">Caruaru, Pernambuco — Brasil | <a href="https://www.linkedin.com/company/icods" target="_blank">LinkedIn</a></p>
+        </div>
     </footer>
 
 </body>
