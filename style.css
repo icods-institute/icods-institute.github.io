@@ -1,8 +1,8 @@
 :root {
-    --bg-main: #091E1A;         /* Verde escuro profundo (base institucional) */
-    --bg-secondary: #12352D;    /* Verde escuro intermediário para gradientes */
-    --accent: #059669;          /* Verde esmeralda profissional para destaques e botões */
-    --accent-light: #34D399;    /* Verde claro para detalhes e badges */
+    --bg-main: #091E1A;         /* Verde escuro profundo */
+    --bg-secondary: #12352D;    /* Verde escuro intermediário */
+    --accent: #059669;          /* Verde esmeralda profissional */
+    --accent-light: #34D399;    /* Verde claro */
     --text-dark: #1E293B;
     --text-muted: #64748B;
     --bg-light: #F8FAFC;
@@ -214,4 +214,309 @@ body {
 }
 
 .about-desc {
-    font-size
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Pillars Section */
+.pillars {
+    padding: 6rem 0;
+    background-color: var(--bg-light);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.pillar-card {
+    background-color: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01);
+}
+
+.pillar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px -5px rgba(9, 30, 26, 0.08);
+    border-color: var(--accent-light);
+}
+
+.pillar-number {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.pillar-card h3 {
+    font-size: 1.2rem;
+    color: var(--bg-main);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.pillar-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Founder Section */
+.founder-section {
+    padding: 6rem 0;
+    background-color: var(--white);
+    border-top: 1px solid var(--border);
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.founder-bio h3 {
+    font-size: 1.8rem;
+    color: var(--bg-main);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.founder-subtitle {
+    font-size: 1.05rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.founder-bio p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.founder-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.highlight-item {
+    display: flex;
+    gap: 1.25rem;
+    background: var(--bg-light);
+    padding: 1.25rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.highlight-icon {
+    font-size: 1.75rem;
+}
+
+.highlight-item h4 {
+    font-size: 1.05rem;
+    color: var(--bg-main);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.highlight-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Store / Products Showcase Section */
+.store-section {
+    padding: 6rem 0;
+    background-color: var(--bg-light);
+}
+
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.store-card {
+    background-color: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.store-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -5px rgba(9, 30, 26, 0.08);
+}
+
+.featured-card {
+    border: 2px solid var(--accent);
+}
+
+.badge-free, .badge-featured, .badge-consulting {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    margin-bottom: 1.25rem;
+    width: max-content;
+    letter-spacing: 0.5px;
+}
+
+.badge-free {
+    background: rgba(5, 150, 105, 0.1);
+    color: var(--accent);
+}
+
+.badge-featured {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.badge-consulting {
+    background: var(--bg-main);
+    color: var(--white);
+}
+
+.store-card h3 {
+    font-size: 1.35rem;
+    color: var(--bg-main);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.store-card > p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.store-features {
+    list-style: none;
+    margin-bottom: 2rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.25rem;
+}
+
+.store-features li {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+}
+
+.btn-store-outline {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.btn-store-outline:hover {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.btn-store-primary {
+    background: var(--accent);
+    color: var(--white);
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.btn-store-primary:hover {
+    background: #047857;
+}
+
+.btn-store-dark {
+    background: var(--bg-main);
+    color: var(--white);
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.btn-store-dark:hover {
+    background: var(--accent);
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--bg-main);
+    color: #94A3B8;
+    padding: 4rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.footer-content p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-location a {
+    color: var(--accent-light);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-location a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 968px) {
+    .founder-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.25rem;
+    }
+    .nav-links {
+        display: none;
+    }
+    .hero-actions {
+        flex-direction: column;
+    }
+}
