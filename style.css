@@ -113,14 +113,14 @@ body {
 }
 
 .hero h1 {
-    font-size: 2.75rem;
+    font-size: 2rem;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1.5rem;
 }
 
 .hero p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #cbd5e1;
     margin-bottom: 2.5rem;
     line-height: 1.7;
