@@ -21,6 +21,11 @@ body {
     line-height: 1.6;
 }
 
+/* Adicionado para justificar todos os textos de parágrafo como no Word */
+p {
+    text-align: justify;
+}
+
 .container {
     max-width: 1150px;
     margin: 0 auto;
